@@ -1,0 +1,14 @@
+{
+  "name": "typescript",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "",
+  "homepage": "",
+  "license": "ISC",
+  "publishConfig": {
+    "registry": "http://npm.perfma-inc.com/"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  }
+}
