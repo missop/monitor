@@ -117,3 +117,13 @@ https://www.dingxiang-inc.com/business/fingerprint?utm_source=baidu1sem&utm_medi
 
 
 https://github.com/fingerprintjs/fingerprintjs
+
+## 接下来怎么做
+// 简单版本优先加载的
+// Core的职责
+// 1. 实现存储队列
+// 2. log方法，判断是否有send能力，没有该能力则将数据存储到存储队列
+// 3. id的补充
+// webSdk extends Core
+// webSdk实现Sentry未实现的功能，初始化Sentry
+用户基础信息，怎么添加到Sentry的上报内容中去??
