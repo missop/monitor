@@ -33,3 +33,24 @@ export default class Core {
     }
 
 }
+
+
+import {init} from '@sentry/browser'
+
+class WebSdk {
+  constructor(options){
+    init({
+      // 如果不填dsn的话不执行beforeSend，beforeBreadcrumb
+      dsn:'https://examplePublicKey@o0.ingest.sentry.io/0',
+      beforeSend(ev,it){
+        console.log("beforeSend",ev,it)
+        const blob = new Blob([JSON.stringify(ev)],{type:'application/json; charset=UTF-8'})
+    
+        // navigator.sendBeacon('http://localhost:3000/api',blob)
+      },
+      beforeBreadcrumb(b,h){
+        console.log("beforeBreadcrumb",b,h)
+      }
+    })
+  }
+}
